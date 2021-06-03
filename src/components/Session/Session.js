@@ -1,8 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
 import {Redirect} from 'react-router-dom';
-import Auth from '../Auth/Auth';
-import Home from '../Home/Home';
 
 const Session = ({onLoadUser})=>{
     const API_KEY = '0c0eca362b40cdc4df74e5a1e2c95781';
