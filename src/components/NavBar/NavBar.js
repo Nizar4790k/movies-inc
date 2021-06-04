@@ -1,7 +1,7 @@
 //IMPORTANT: THIS COMPONENT WORKS WELL WITH BOOTSTAP 4
 
 
-import { useHistory} from "react-router-dom";
+import { Link, useHistory} from "react-router-dom";
 const NavBar = ({username,onSignOut}) => {
 
   const history = useHistory();
@@ -12,7 +12,7 @@ const NavBar = ({username,onSignOut}) => {
         <div className="container-fluid">
         <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         
-        <a className="navbar-brand" href="/ChatBox">Movies.Inc</a>
+        <Link to="/Home" className="navbar-brand">Movies.Inc</Link>
        
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span className="navbar-toggler-icon"></span>
@@ -22,7 +22,8 @@ const NavBar = ({username,onSignOut}) => {
 
         <ul className="navbar-nav mr-auto">
         <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                
+                <Link to="/Home" className="nav-link">Home</Link>
             </li>
            
         </ul>

@@ -17,7 +17,7 @@ import NavBar from "./components/NavBar/NavBar";
     
 
     const loadUser= (user)=>{
-      console.log(user)
+      
       
       if(!isSignedIn){
         setSignedIn(true);

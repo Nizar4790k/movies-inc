@@ -6,13 +6,14 @@ const MovieList = () => {
 
     const [movies, setMovies] = useState([]);
     const api_key = config[process.env.NODE_ENV].api_key;
+    const [ratedMovies, setRatedMovies]= useState([]);
 
 
     useEffect(() => {
 
         const fetchMovies = async () => {
 
-            const response = await fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=' + api_key);
+            const response = await fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${api_key}`);
             const page = await response.json();
             
             
@@ -29,12 +30,16 @@ const MovieList = () => {
 
             const movies = page.results.sort(predicateBy("title"));
 
+
             setMovies(movies);
 
 
         }
 
+     
+
         fetchMovies();
+      
 
     }, [])
 
@@ -50,14 +55,10 @@ const MovieList = () => {
                       return(
                             <div>
                             <br></br>
-                             <Movie movie={movie} key={i} id={i} />
+                             <Movie movie={movie}  key={i} id={i} />
                              <br></br>
                             </div>
                                 
-                                
-                        
-                           
-                          
                           
                           )
                     }
