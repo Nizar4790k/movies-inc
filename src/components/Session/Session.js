@@ -1,18 +1,19 @@
 
 import React, { useEffect, useState } from 'react';
 import {Redirect} from 'react-router-dom';
+import config from '../../config';
 
-const Session = ({onLoadUser})=>{
-    const API_KEY = '0c0eca362b40cdc4df74e5a1e2c95781';
+const Session = ()=>{
+    const api_key = config[process.env.NODE_ENV].api_key;
     const params = new URLSearchParams(window.location.search);
     
  
    
-    const [sessionId,setSessionId]= useState('');
+    
     const [approved,setApproved] = useState(params.get("approved"));
     const [denied,setDenied] = useState(params.get('denied'))
     const [request_token,setRequestToken] = useState(params.get('request_token'))
-    const [user,setUser] =useState([]);
+   
 
 
   
@@ -21,7 +22,7 @@ const Session = ({onLoadUser})=>{
   useEffect(async ()=>{
 
     async function fetchSessionId(){
-        const response = await fetch('https://api.themoviedb.org/3/authentication/session/new?api_key='+API_KEY,{
+        const response = await fetch(`https://api.themoviedb.org/3/authentication/session/new?api_key=${api_key}`,{
             method:'post',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify({
@@ -35,7 +36,7 @@ const Session = ({onLoadUser})=>{
         console.log(result.session_id);
 
 
-        setSessionId(result.session_id);
+        
 
         
 

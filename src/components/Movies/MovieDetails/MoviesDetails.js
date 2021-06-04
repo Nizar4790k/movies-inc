@@ -14,7 +14,7 @@ const MovieDetails = ({ id, user }) => {
     const [movie, setMovie] = useState('');
     const [idx, setIdx] = useState(Number(id));
     const [genres, setGenres] = useState([]);
-    const [ratedMovies, setRatedMovies] = useState([]);
+   
     const [rating, setRating] = useState(0);
 
     
@@ -48,7 +48,7 @@ const MovieDetails = ({ id, user }) => {
             }));
 
             let ratedMovies = page.results;
-            setRatedMovies(ratedMovies)
+            
 
             ratedMovies.forEach((movie) => {
 

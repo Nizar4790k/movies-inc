@@ -6,7 +6,7 @@ const MovieList = () => {
 
     const [movies, setMovies] = useState([]);
     const api_key = config[process.env.NODE_ENV].api_key;
-    const [ratedMovies, setRatedMovies]= useState([]);
+    
 
 
     useEffect(() => {

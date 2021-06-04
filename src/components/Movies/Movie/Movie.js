@@ -51,7 +51,7 @@ const Movie = ({movie}) => {
           </div>
          
           <div className="col-md-5">
-          <img src={"https://www.themoviedb.org/t/p/w600_and_h900_bestv2"+movie.poster_path}  className="card-img-top" alt="..."></img>
+          <img src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2${movie.poster_path}`}  className="card-img-top" alt="..."></img>
           </div>
           
         </div>

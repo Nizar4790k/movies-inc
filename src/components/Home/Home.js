@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import MovieList from '../Movies/MovieList/MovieList';
 import config  from '../../config';
-import NavBar from '../NavBar/NavBar';
+
 
 
 const Home = ({loadUser,isSignedIn})=>{
