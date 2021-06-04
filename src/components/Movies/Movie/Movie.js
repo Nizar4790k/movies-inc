@@ -1,16 +1,36 @@
-import React from 'react';
-import { useHistory } from "react-router-dom";
+import React, { useEffect,useState } from 'react';
+import {  useHistory } from "react-router-dom";
+import config from "../../../config";
 import "./Movie.css";
 
 
 const Movie = ({movie}) => {
 
     const history = useHistory();
+    const [genres,setGenres] = useState([])
+
 
     const goToDetails = () => {
         history.push(`Movies/${movie.id}`);
       };
     
+
+      useEffect(()=>{
+        
+        const fetchMoviesDetails = async () =>{
+          const api_key = config[process.env.NODE_ENV].api_key;
+          const response =  await fetch(`https://api.themoviedb.org/3/movie/ ${movie.id.toString()}?api_key=${api_key}&language=en-US`);
+          const result = await response.json();
+          setGenres(result.genres);
+          
+          
+          
+
+      }
+
+      fetchMoviesDetails();
+
+      },[])
     
 /*
     return (
@@ -45,6 +65,17 @@ const Movie = ({movie}) => {
               <b>Average Vote: </b>{movie.vote_average}
               <br/>
               <p className="card-text"><b>Release Date: </b>{movie.release_date}</p>
+              
+              <p className="card-text"><b>Genres:</b></p>
+              <ul>
+                        
+              {genres.map((genre, i) => {
+                            return (<li key={i}>{genre.name}</li>)
+                        })}
+
+
+                    </ul>
+              
              
               <button className="btn btn-info" style={{"color":"white"}} onClick= {()=>{goToDetails()}} >View details</button>
             </div>

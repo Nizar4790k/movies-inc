@@ -5,6 +5,7 @@ import Movie from '../Movie/Movie';
 const MovieList = () => {
 
     const [movies, setMovies] = useState([]);
+    
     const api_key = config[process.env.NODE_ENV].api_key;
     
 
@@ -29,6 +30,8 @@ const MovieList = () => {
              }
 
             const movies = page.results.sort(predicateBy("title"));
+            
+        
 
 
             setMovies(movies);
@@ -36,6 +39,7 @@ const MovieList = () => {
 
         }
 
+       
      
 
         fetchMovies();
