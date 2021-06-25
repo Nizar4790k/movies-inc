@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Nizar4790k.github.io/movies-inc/Auth/static/css/main.f0db3626.chunk.css",
+    "main.js": "/Nizar4790k.github.io/movies-inc/Auth/static/js/main.39656553.chunk.js",
+    "main.js.map": "/Nizar4790k.github.io/movies-inc/Auth/static/js/main.39656553.chunk.js.map",
+    "runtime-main.js": "/Nizar4790k.github.io/movies-inc/Auth/static/js/runtime-main.b3804b81.js",
+    "runtime-main.js.map": "/Nizar4790k.github.io/movies-inc/Auth/static/js/runtime-main.b3804b81.js.map",
+    "static/js/2.57bd1e3a.chunk.js": "/Nizar4790k.github.io/movies-inc/Auth/static/js/2.57bd1e3a.chunk.js",
+    "static/js/2.57bd1e3a.chunk.js.map": "/Nizar4790k.github.io/movies-inc/Auth/static/js/2.57bd1e3a.chunk.js.map",
+    "static/js/3.a6e26900.chunk.js": "/Nizar4790k.github.io/movies-inc/Auth/static/js/3.a6e26900.chunk.js",
+    "static/js/3.a6e26900.chunk.js.map": "/Nizar4790k.github.io/movies-inc/Auth/static/js/3.a6e26900.chunk.js.map",
+    "index.html": "/Nizar4790k.github.io/movies-inc/Auth/index.html",
+    "static/css/main.f0db3626.chunk.css.map": "/Nizar4790k.github.io/movies-inc/Auth/static/css/main.f0db3626.chunk.css.map",
+    "static/js/2.57bd1e3a.chunk.js.LICENSE.txt": "/Nizar4790k.github.io/movies-inc/Auth/static/js/2.57bd1e3a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b3804b81.js",
+    "static/js/2.57bd1e3a.chunk.js",
+    "static/css/main.f0db3626.chunk.css",
+    "static/js/main.39656553.chunk.js"
+  ]
+}
