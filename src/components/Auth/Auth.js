@@ -16,7 +16,7 @@ const Auth =()=>{
       
           
       
-          window.location.href =`https://www.themoviedb.org/authenticate/${token}?redirect_to=http://localhost:3000/Session`;
+          window.location.href =`https://www.themoviedb.org/authenticate/${token}?redirect_to=https://movies-inc.herokuapp.com/Session`;
         
         
         }
