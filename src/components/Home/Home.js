@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import MovieList from '../Movies/MovieList/MovieList';
-import config  from '../../config';
+
 
 
 
 const Home = ({loadUser,isSignedIn})=>{
 
     
-    const api_key= config[process.env.NODE_ENV].api_key;
+    const api_key= process.env.REACT_APP_API_KEY;
     const [user,setUser]=useState([]);
     const [sessionId,setSessionId]=useState(localStorage.getItem('session_id'))
 

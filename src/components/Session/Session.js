@@ -1,10 +1,10 @@
 
 import React, { useEffect, useState } from 'react';
 import {Redirect} from 'react-router-dom';
-import config from '../../config';
+
 
 const Session = ()=>{
-    const api_key = config[process.env.NODE_ENV].api_key;
+    const api_key = process.env.REACT_APP_API_KEY;
     const params = new URLSearchParams(window.location.search);
     
  

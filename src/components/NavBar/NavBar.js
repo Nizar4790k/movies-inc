@@ -21,7 +21,7 @@ const NavBar = ({username,onSignOut}) => {
         <div className="collapse navbar-collapse" id="navbarNav">
 
         <ul className="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <li className="nav-item active">
                 
                 <Link to="/Home" className="nav-link">Home</Link>
             </li>

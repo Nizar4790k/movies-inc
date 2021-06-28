@@ -1,7 +1,5 @@
 import React,{useState} from "react";
-
-
-import { BrowserRouter as Router, Route, Switch,useHistory} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Session from './components/Session/Session';
 import Auth from "./components/Auth/Auth";
 import Home from './components/Home/Home';

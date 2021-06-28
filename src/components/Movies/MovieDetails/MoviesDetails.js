@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import config from '../../../config';
+
 import ReactStars from 'react-rating-stars-component'
 import "./MoviesDetails.css"
 import { useHistory } from 'react-router-dom';
@@ -20,7 +20,7 @@ const MovieDetails = ({ id, user }) => {
     
 
 
-    const api_key = config[process.env.NODE_ENV].api_key;
+    const api_key = process.env.REACT_APP_API_KEY;
 
 
     const history = useHistory();

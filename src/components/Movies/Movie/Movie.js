@@ -1,6 +1,6 @@
 import React, { useEffect,useState } from 'react';
 import {  useHistory } from "react-router-dom";
-import config from "../../../config";
+
 import "./Movie.css";
 
 
@@ -18,7 +18,7 @@ const Movie = ({movie}) => {
       useEffect(()=>{
         
         const fetchMoviesDetails = async () =>{
-          const api_key = config[process.env.NODE_ENV].api_key;
+          const api_key = process.env.REACT_APP_API_KEY
           const response =  await fetch(`https://api.themoviedb.org/3/movie/ ${movie.id.toString()}?api_key=${api_key}&language=en-US`);
           const result = await response.json();
           setGenres(result.genres);

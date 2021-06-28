@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import config from '../../../config.js';
+
 import Movie from '../Movie/Movie';
 
 const MovieList = () => {
 
     const [movies, setMovies] = useState([]);
     
-    const api_key = config[process.env.NODE_ENV].api_key;
+    const api_key = process.env.REACT_APP_API_KEY;
     
 
 

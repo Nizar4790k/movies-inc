@@ -1,13 +1,13 @@
-import config from '../../config';
+
 import {useEffect} from "react";
 const Auth =()=>{
 
       
-       const api_key = config[process.env.NODE_ENV].api_key;
-       
+       const api_key = process.env.REACT_APP_API_KEY;
+       console.log(api_key);
         
         async function authenticate(){
-      
+          
            
           const  response = await fetch(`https://api.themoviedb.org/3/authentication/token/new?api_key=${api_key}`);
           const result = await response.json();
