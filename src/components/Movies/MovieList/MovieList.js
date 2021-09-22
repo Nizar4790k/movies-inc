@@ -8,11 +8,9 @@ const MovieList = () => {
     
     const api_key = process.env.REACT_APP_API_KEY;
     
-
-
     useEffect(() => {
 
-        const fetchMovies = async () => {
+        const fetchMoviesOrderedByTitle = async () => {
 
             const response = await fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${api_key}`);
             const page = await response.json();
@@ -30,28 +28,16 @@ const MovieList = () => {
              }
 
             const movies = page.results.sort(predicateBy("title"));
-            
-        
-
-
             setMovies(movies);
-
 
         }
 
-       
-     
-
-        fetchMovies();
+        fetchMoviesOrderedByTitle();
       
 
     }, [])
 
     return (
-            
-        
-           
-            
             
             movies.map((movie, i) => {
 
@@ -62,16 +48,12 @@ const MovieList = () => {
                              <Movie movie={movie}  key={i} id={i} />
                              <br></br>
                             </div>
-                                
-                          
                           )
                     }
                     
                 )
-                
-               
+              
     );
-
 }
 
 export default MovieList;

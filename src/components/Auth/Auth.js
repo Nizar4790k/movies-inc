@@ -4,7 +4,7 @@ const Auth =()=>{
 
       
        const api_key = process.env.REACT_APP_API_KEY;
-       console.log(api_key);
+      
         
         async function authenticate(){
           
@@ -30,7 +30,7 @@ const Auth =()=>{
         
         },[]);
       
-        return(null)
+        return(<h1>Loading...</h1>)
 
 }
 

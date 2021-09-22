@@ -29,12 +29,6 @@ const Home = ({loadUser,isSignedIn})=>{
             if(!isSignedIn){
                 loadUser(result);
             }
-            
-    
-          
-            
-    
-            
     
         }
 

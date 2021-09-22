@@ -29,7 +29,7 @@ const NavBar = ({username,onSignOut}) => {
         </ul>
 
         <ul className="navbar-nav">
-        <li className="nav-item"><a class="nav-link" href="#">{username}</a></li>
+        <li className="nav-item"><a className="nav-link" href="#">{username}</a></li>
         
         <li className="nav-item"> <button type="button" id="signout" className="btn btn-danger" onClick={()=>{
             

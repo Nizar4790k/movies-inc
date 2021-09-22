@@ -8,18 +8,12 @@ import { useHistory } from 'react-router-dom';
 
 const MovieDetails = ({ id, user }) => {
 
-
-
-
     const [movie, setMovie] = useState('');
     const [idx, setIdx] = useState(Number(id));
     const [genres, setGenres] = useState([]);
-   
     const [rating, setRating] = useState(0);
 
-    
-
-
+   
     const api_key = process.env.REACT_APP_API_KEY;
 
 
@@ -31,7 +25,7 @@ const MovieDetails = ({ id, user }) => {
 
     useEffect(() => {
 
-        const getData = async function () {
+        const getMovieDetails = async function () {
 
             const session_id = localStorage.getItem('session_id')
 
@@ -70,13 +64,9 @@ const MovieDetails = ({ id, user }) => {
 
         }
 
-        getData();
+        getMovieDetails();
 
     }, [])
-
-
-   
-
 
 
     const rateMovie = async (newRating) => {
@@ -98,10 +88,6 @@ const MovieDetails = ({ id, user }) => {
 
 
     }
-
-
-
-
 
     return (
 
